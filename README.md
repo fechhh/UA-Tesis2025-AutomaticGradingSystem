@@ -10,9 +10,9 @@ Características principales
 
 ✔ Entrada: Foto o escaneo de un examen (formato libre dentro de parámetros razonables, se estimó una rotación menor a 10° y perspectivas menores a 5°).
 
-✔ Corrección geométrica: Compensación de inclinación, perspectiva y deformaciones usando homografías.
-
 ✔ Segmentación del área de burbujas: Modelo YOLO-Seg entrenado específicamente para detectar la región de respuestas.
+
+✔ Corrección geométrica: Compensación de inclinación, perspectiva y deformaciones usando homografías.
 
 ✔ Extracción de celdas por pregunta: Recorte automático de cada burbuja según la estructura del examen.
 
