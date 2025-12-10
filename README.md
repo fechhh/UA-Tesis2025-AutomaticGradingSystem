@@ -6,8 +6,9 @@ Este repositorio contiene el código y la documentación del sistema desarrollad
 El sistema realiza todo el proceso: desde la detección del área de burbujas hasta la predicción final de respuestas, integrando redes neuronales, técnicas de procesamiento digital de imágenes y un pipeline eficiente de inferencia.
 
 Características principales
-✔ Entrada: Foto o escaneo de un examen (formato libre dentro de parámetros razonables, se estimó una rotación menor a 10° y perspectivas menores a 5°).\\
-✔ Corrección geométrica: Compensación de inclinación, perspectiva y deformaciones usando homografías.\\
+✔ Entrada: Foto o escaneo de un examen (formato libre dentro de parámetros razonables, se estimó una rotación menor a 10° y perspectivas menores a 5°).
+
+✔ Corrección geométrica: Compensación de inclinación, perspectiva y deformaciones usando homografías.
 ✔ Segmentación del área de burbujas: Modelo YOLO-Seg entrenado específicamente para detectar la región de respuestas.
 ✔ Extracción de celdas por pregunta: Recorte automático de cada burbuja según la estructura del examen.
 ✔ Clasificación por pregunta: Red neuronal (MobileNetV2 / ResNet-18) que determina cuál burbuja está marcada.
