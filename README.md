@@ -22,3 +22,13 @@ El sistema realiza todo el proceso: desde la detección del área de burbujas ha
 
 ✔ Salida: Respuestas detectadas y puntaje final, opcionalmente integrable con un bot de Telegram.
 
+
+## Guía de documentos
+
+1- El script "1-entrenar_yolo_segment_detectar_columnas_v2.ipynb" recibe los labels desde LabelMe con las coordenadas de las columnas con celdas de respuesta en cada una de las imágenes. Este archivo las converite en formato YOLO-Seg, y utiliza estos datos para entrenar la red neuronal. La salida de este script son nuevas carpetas (una por cada imagen) con los recortes de las 3 columnas del examen.
+
+2- El script "2-sobrepone_grillas_entrena_detector.ipynb" abre los recortes de las 3 columnas de cada examen, sobrepone una grilla sobre cada una de ellas, y recorta las celdas individuales. Estas celdas individuales son luego labeleadas manualmente en "cruz" o "no cruz", y son guardadas en carpetas separadas.
+
+3- Dentro de la carpeta "3-modelo_detector_cruces_mobilenet" se encuentra el modelo detector de cruces, el cual recibe los recortes del script 2, y los utiliza para entrenar la red neuronal MobileNetV2.
+
+Todos estos documentos fueron utilizados para obtener entrenar los modelos, evaluarlos mediante métricas, y hacer distintas pruebas sobre los mismos para entenderlos mejor e identificar lo que mejor funciona. Asimismo, existe una carpeta llamada "telegram_bot" donde se crearon archivos .py con las últimas versiones de los modelos ya entrenados. Estos documentos son utilizados para la corrección de exámenes mediante un bot de Telegram que guía al usuario para enviar las imágenes a evaluar y las respuestas correctas. Este sistema puede luego ser implementado en una app para celulares, sin necesidad de conexión a internet o de tener un servidor corriendo continuamente.
