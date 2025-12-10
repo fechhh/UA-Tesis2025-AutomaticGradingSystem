@@ -1,12 +1,12 @@
 # UA-Tesis2025-AutomaticGradingSystem
 
-Corrección robusta de exámenes de opci+on múltiple a partir de imágenes capturadas en condiciones reales de uso mediante técnicas de deep learning
+Corrección robusta de exámenes de opción múltiple a partir de imágenes capturadas en condiciones reales de uso mediante técnicas de deep learning
 
 Este repositorio contiene el código y la documentación del sistema desarrollado para la corrección automática de exámenes multiple choice a partir de imágenes.
 El sistema realiza todo el proceso: desde la detección del área de burbujas hasta la predicción final de respuestas, integrando redes neuronales, técnicas de procesamiento digital de imágenes y un pipeline eficiente de inferencia.
 
 
-Características principales
+## Características principales
 
 ✔ Entrada: Foto o escaneo de un examen (formato libre dentro de parámetros razonables, se estimó una rotación menor a 10° y perspectivas menores a 5°).
 
